@@ -33,14 +33,14 @@ def rf(file_name):
     f.close()
     return r
 
-def wf(file_name, data):
-    f = open(file_name, "wb")
+def wf(file_name, data, flags = "wb"):
+    f = open(file_name, flags)
     f.write(data)
     f.close()
     return
 
 def ReadFile(FilePath): return rf(FilePath)
-def WriteFile(FilePath, Data): wf(FilePath, Data)
+def WriteFile(FilePath, Data, Flags): wf(FilePath, Data, Flags)
 
 LE = 0 # Little Endian
 BE = 1 # Big Endian
